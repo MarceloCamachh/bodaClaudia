@@ -1,5 +1,7 @@
-import fotoboda from '../assets/fotoboda.jpg'
+import fotoboda from '../assets/fotoboda.jpeg'
+import fotoinicio from '../assets/fotoinicio2.jpeg'
 import iglesia from '../assets/iglesia.jpg'
+import rosas from '../assets/rosas.png'
 import { Divider } from './Divider'
 import { Hero } from './Hero'
 import { StoryChapter } from './StoryChapter'
@@ -13,7 +15,9 @@ export function WeddingPage() {
       ref={containerRef}
       className="min-h-svh w-full bg-[var(--white)] text-[var(--text)]"
     >
-      <Hero heroImage={fotoboda} />
+      <Hero heroImage={fotoinicio} />
+
+      <Divider />
 
       <StoryChapter
         imageSrc={fotoboda}
@@ -22,30 +26,10 @@ export function WeddingPage() {
 
       <Divider />
 
-      <section className="story-standalone">
-        <p className="section-label">Entreacto</p>
-        <h2 className="section-title">
-          Dos caminos que se volvieron <em>uno solo</em>
-        </h2>
-        <div className="story-text">
-          <p>
-            Cada paso compartido fue una página más de este relato. Aprendimos a
-            escucharnos, a reírnos de lo mismo y a encontrarnos en los pequeños
-            gestos: un café al amanecer, una mano en la mesa, un hogar que se
-            fue llenando de sueños comunes.
-          </p>
-          <p>
-            La foto que viste al inicio no es solo un retrato: es la promesa de
-            seguir escribiendo juntos lo que viene, con la misma mirada y el
-            mismo sí.
-          </p>
-        </div>
-      </section>
-
-      <Divider />
-
       <section>
         <div className="love-quote">
+          <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-left" />
+          <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-right" />
           <blockquote>
             &ldquo;El amor es paciente, es bondadoso, no guarda rencor, todo lo
             soporta, todo lo cree, todo lo espera, todo lo puede.&rdquo;
@@ -56,7 +40,37 @@ export function WeddingPage() {
 
       <Divider />
 
+      <section id="padrinos">
+        <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-left-sm" />
+        <p className="section-label">Padrinos</p>
+        <h2 className="section-title">
+          Quienes nos <em>acompañan</em>
+        </h2>
+        <div className="sponsors-grid">
+          <div className="sponsor-card">
+            <p className="sponsor-name">Alcides Landívar Somosa</p>
+            <p className="sponsor-role">Padrino</p>
+          </div>
+          <div className="sponsor-card">
+            <p className="sponsor-name">Bertha Ardaya Somosa</p>
+            <p className="sponsor-role">Madrina (Tía)</p>
+          </div>
+          <div className="sponsor-card">
+            <p className="sponsor-name">Ivana Carolina Justiniano Sandoval</p>
+            <p className="sponsor-role">Madrina de Boda Religiosa</p>
+          </div>
+          <div className="sponsor-card">
+            <p className="sponsor-name">José Ernesto Senseve</p>
+            <p className="sponsor-role">Padrino de Boda Religiosa</p>
+          </div>
+        </div>
+        <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-bottom-right-sm" />
+      </section>
+
+      <Divider />
+
       <section id="ceremonia">
+        <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-right-sm" />
         <p className="section-label">Capítulo final</p>
         <h2 className="section-title">
           El día que <em>dijimos sí</em>
@@ -90,6 +104,7 @@ export function WeddingPage() {
             </a>
           </div>
         </div>
+        <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-bottom-left-sm" />
       </section>
 
       <Divider />

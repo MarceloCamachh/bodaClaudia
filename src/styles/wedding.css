@@ -1,4 +1,6 @@
-﻿ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+﻿@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
+
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
    :root {
    --gold: #c9a84c;
    --gold-light: #e8d5a3;
@@ -85,9 +87,9 @@
    opacity: 0.9;
  }
    .hero-names {
-   font-family: 'Cormorant Garamond', serif;
+   font-family: 'Mea Culpa', cursive;
    font-weight: 300;
-   font-size: clamp(3rem, 9vw, 7rem);
+   font-size: clamp(4rem, 12vw, 9rem);
    color: #fff;
    line-height: 1;
    letter-spacing: 0.02em;
@@ -172,8 +174,7 @@
    margin: 0 auto;
    opacity: 0;
    transform: translateY(30px);
-   transition: opacity 0.9s ease, transform 0.9s ease;
- }
+   transition: opacity 0.9s ease, transform 0.9s ease;   position: relative; }
    section.visible {
    opacity: 1;
    transform: translateY(0);
@@ -419,7 +420,7 @@
    padding: 4rem 2rem;
  }
    footer .footer-names {
-   font-family: 'Cormorant Garamond', serif;
+   font-family: 'Mea Culpa', cursive;
    font-size: clamp(1.8rem, 4vw, 3rem);
    font-weight: 300;
    letter-spacing: 0.05em;
@@ -495,7 +496,114 @@
    max-width: 640px;
    margin: 0 auto;
  }
-   /* Hero: scroll-scrub solo en la primera pantalla */
+
+ /* â"€â"€ SPONSORS â"€â"€ */
+ .sponsors-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 2rem;
+   margin-top: 3rem;
+ }
+
+ .sponsor-card {
+   text-align: center;
+   padding: 2rem 1.5rem;
+   background: var(--cream);
+   border: 1px solid var(--gold-light);
+   border-radius: 2px;
+ }
+
+ .sponsor-name {
+   font-family: 'Cormorant Garamond', serif;
+   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+   font-weight: 600;
+   color: var(--text);
+   margin-bottom: 0.5rem;
+ }
+
+ .sponsor-role {
+   font-family: 'Cinzel', serif;
+   font-size: 0.65rem;
+   letter-spacing: 0.2em;
+   color: var(--gold-dark);
+   text-transform: uppercase;
+ }
+
+ /* â"€â"€ COUPLE NAMES â"€â"€ */
+ .couple-names {
+   font-family: 'Mea Culpa', cursive;
+   font-size: clamp(1.8rem, 4vw, 2.5rem);
+   font-weight: 300;
+   text-align: center;
+   margin-top: 1.5rem;
+   color: var(--text);
+ }
+
+ .couple-names em {
+   font-style: italic;
+   color: var(--gold-dark);
+ }
+
+ /* Mea Culpa para "Nos casamos" */
+ #story .section-title {
+   font-family: 'Mea Culpa', cursive;
+ }
+
+ /* â"€â"€ ROSE DECORATIONS â"€â"€ */
+ .rose-decoration {
+   position: absolute;
+   pointer-events: none;
+   opacity: 0.85;
+   object-fit: contain;
+ }
+
+ .rose-top-left {
+   top: -30px;
+   left: -30px;
+   width: 120px;
+   height: 120px;
+ }
+
+ .rose-top-right {
+   top: -30px;
+   right: -30px;
+   width: 120px;
+   height: 120px;
+   transform: scaleX(-1);
+ }
+
+ .rose-top-left-sm {
+   top: -20px;
+   left: -20px;
+   width: 80px;
+   height: 80px;
+ }
+
+ .rose-top-right-sm {
+   top: -20px;
+   right: -20px;
+   width: 80px;
+   height: 80px;
+   transform: scaleX(-1);
+ }
+
+ .rose-bottom-left-sm {
+   bottom: -20px;
+   left: -20px;
+   width: 80px;
+   height: 80px;
+ }
+
+ .rose-bottom-right-sm {
+   bottom: -20px;
+   right: -20px;
+   width: 80px;
+   height: 80px;
+   transform: scaleX(-1);
+ }
+
+ 
+   /* â"€â"€ Hero: scroll-scrub solo en la primera pantalla â"€â"€ */
  .hero-scroll-stage {
    position: relative;
    height: 230vh;
