@@ -7,15 +7,22 @@ export function StoryChapter({ imageSrc, imageAlt }: StoryChapterProps) {
   return (
     <section id="story" className="story-beat" aria-labelledby="story-heading">
       <div className="story-copy">
+        <p className="section-label">Invitación</p>
         <h2 id="story-heading" className="section-title">
-          Nos <em>casamos</em>
+          ! Nos vamos a <em>casar ¡</em>
         </h2>
+        <div className="story-text">
+          <p>
+            Te invitamos a celebrar con nosotros este día tan importante.
+            Encuentra aquí los detalles de la ceremonia y de la fiesta posterior,
+            para que puedas acompañarnos desde el primer momento.
+          </p>
+        </div>
       </div>
       <figure className="story-visual">
-        <img src={imageSrc} alt={imageAlt} />
-        <figcaption className="story-caption">
-          El instante en que el tiempo se detuvo
-        </figcaption>
+        <div className="story-image-frame">
+          <img src={imageSrc} alt={imageAlt} />
+        </div>
         <div className="couple-names">
           <p><em>Claudia Isela</em> &amp; <em>Juan Carlos</em></p>
         </div>
