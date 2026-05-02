@@ -77,7 +77,24 @@
    from { opacity: 0; transform: translateY(40px); }
    to   { opacity: 1; transform: translateY(0); }
  }
+   @keyframes motionEntrance {
+   from { opacity: 0; transform: translateY(24px) scale(0.98); }
+   to   { opacity: 1; transform: translateY(0) scale(1); }
+ }
+   .hero-content,
+   .music-card,
+   .ceremony-card,
+   .countdown-card,
+   .instruction-card,
+   .sponsor-card,
+   .love-quote,
+   footer,
+   .story-image-frame,
+   .story-copy {
+   animation: motionEntrance 0.9s ease both;
+ }
    .hero-eyebrow {
+   display: inline-block;
    font-family: 'Cinzel', serif;
    font-size: clamp(0.65rem, 1.2vw, 0.8rem);
    letter-spacing: 0.35em;
@@ -85,6 +102,8 @@
    text-transform: uppercase;
    margin-bottom: 1.2rem;
    opacity: 0.9;
+   will-change: transform;
+   transition: transform 0.1s ease-out;
  }
    .hero-names {
    font-family: 'Mea Culpa', cursive;
@@ -131,7 +150,7 @@
    align-items: center;
    gap: 0.4rem;
    opacity: 0.6;
-   animation: bounce 2.5s ease-in-out infinite;
+   animation: bounce 1.4s ease-in-out infinite;
  }
    @keyframes bounce {
    0%, 100% { transform: translateX(-50%) translateY(0); }
@@ -139,8 +158,8 @@
  }
    .scroll-hint span {
    font-family: 'Cinzel', serif;
-   font-size: 0.55rem;
-   letter-spacing: 0.25em;
+   font-size: 0.85rem;
+   letter-spacing: 0.35em;
    color: var(--gold-light);
    text-transform: uppercase;
  }
@@ -198,6 +217,188 @@
    margin-bottom: 2.5rem;
  }
    .section-title em { font-style: italic; color: var(--gold-dark); }
+   .countdown-card {
+   max-width: 760px;
+   margin: 0 auto 2.5rem;
+   padding: 2rem 2.5rem;
+   background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(245,236,221,.95));
+   border: 1px solid rgba(204, 170, 110, 0.35);
+   border-radius: 28px;
+   text-align: center;
+   animation: motionEntrance 0.9s ease both;
+   transition: transform 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+ }
+ .countdown-timer {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 1rem;
+   margin-top: 1.5rem;
+ }
+ .countdown-unit {
+   min-width: 85px;
+ }
+ .countdown-number {
+   display: block;
+   font-family: 'Cormorant Garamond', serif;
+   font-size: clamp(1.8rem, 3vw, 2.5rem);
+   color: var(--text);
+   font-weight: 700;
+ }
+ .countdown-label {
+   display: block;
+   margin-top: 0.4rem;
+   font-size: 0.78rem;
+   letter-spacing: 0.25em;
+   text-transform: uppercase;
+   color: var(--gold-dark);
+ }
+ .instructions-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   gap: 1.5rem;
+   max-width: 980px;
+   margin: 0 auto;
+ }
+ .instruction-card {
+   position: relative;
+   padding: 2.5rem 2rem;
+   background: rgba(255, 255, 255, 0.95);
+   border: 1px solid rgba(250, 215, 170, 0.4);
+   border-radius: 28px;
+   box-shadow: 0 24px 60px rgba(23, 17, 10, 0.06);
+   overflow: hidden;
+   animation: motionEntrance 0.9s ease both;
+   transition: transform 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+ }
+ .instruction-card::before {
+   content: '';
+   position: absolute;
+   inset: 0;
+   background: radial-gradient(circle at top left, rgba(255, 225, 155, 0.25), transparent 42%);
+   pointer-events: none;
+ }
+ .instruction-card::after {
+   content: '';
+   position: absolute;
+   width: 68px;
+   height: 68px;
+   border-radius: 50%;
+   background: rgba(255, 255, 255, 0.7);
+   top: 1.2rem;
+   right: 1.2rem;
+   box-shadow: inset 0 0 0 1px rgba(250, 215, 170, 0.4);
+   pointer-events: none;
+ }
+ .instruction-card > * {
+   position: relative;
+   z-index: 1;
+ }
+ .instruction-title {
+   font-family: 'Cormorant Garamond', serif;
+   font-size: 1.4rem;
+   margin-bottom: 0.75rem;
+   color: var(--text);
+ }
+ .instruction-text {
+   line-height: 1.9;
+   color: var(--text-light);
+ }
+ @media (max-width: 760px) {
+   .instructions-grid {
+     grid-template-columns: 1fr;
+   }
+ }
+ .itinerary-section {
+   background: linear-gradient(180deg, rgba(255, 250, 245, 0.95), rgba(255, 255, 255, 0.95));
+   padding: 4rem 1.5rem;
+ }
+ .itinerary-board {
+   position: relative;
+   display: grid;
+   grid-template-columns: repeat(7, minmax(110px, 1fr));
+   gap: 0.75rem;
+   padding: 2.5rem 0 1rem;
+   margin-top: 3rem;
+ }
+ .itinerary-board::before {
+   content: '';
+   position: absolute;
+   top: 2.6rem;
+   left: 0.75rem;
+   right: 0.75rem;
+   height: 2px;
+   background: rgba(154, 120, 72, 0.24);
+   z-index: 0;
+ }
+ .itinerary-item {
+   position: relative;
+   display: grid;
+   grid-template-rows: auto 1fr;
+   align-items: start;
+   justify-items: center;
+   padding: 1rem 0.5rem 0.5rem;
+   background: rgba(255, 255, 255, 0.96);
+   border-radius: 28px;
+   border: 1px solid rgba(250, 215, 170, 0.35);
+   box-shadow: 0 18px 50px rgba(23, 17, 10, 0.06);
+   z-index: 1;
+ }
+ .itinerary-icon {
+   width: 46px;
+   height: 46px;
+   border-radius: 50%;
+   background: rgba(201, 168, 76, 0.15);
+   border: 1px solid rgba(201, 168, 76, 0.35);
+   display: grid;
+   place-items: center;
+   margin-bottom: 0.6rem;
+ }
+ .itinerary-icon::after {
+   content: '';
+   width: 18px;
+   height: 18px;
+   border-radius: 50%;
+   background: var(--gold);
+ }
+ .itinerary-text {
+   display: flex;
+   flex-direction: column;
+   gap: 0.45rem;
+   align-items: center;
+ }
+ .itinerary-time {
+   font-family: 'Cinzel', serif;
+   font-size: 0.85rem;
+   letter-spacing: 0.25em;
+   text-transform: uppercase;
+   color: var(--gold-dark);
+ }
+ .itinerary-action {
+   font-family: 'Cormorant Garamond', serif;
+   font-size: 0.95rem;
+   line-height: 1.6;
+   color: var(--text);
+ }
+ @media (max-width: 1040px) {
+   .itinerary-board {
+     grid-template-columns: repeat(4, minmax(120px, 1fr));
+   }
+ }
+ @media (max-width: 760px) {
+   .itinerary-board {
+     grid-template-columns: 1fr;
+     max-width: 100%;
+     margin: 2rem auto 0;
+     padding: 1rem 0 0.5rem;
+   }
+   .itinerary-board::before {
+     display: none;
+   }
+   .itinerary-item {
+     padding: 1.25rem 1.5rem;
+   }
+ }
    .story-text {
    font-size: clamp(1.05rem, 2vw, 1.25rem);
    line-height: 1.9;
@@ -227,6 +428,8 @@
    overflow: hidden;
    max-width: 600px;
    margin: 0 auto;
+   animation: motionEntrance 0.9s ease both;
+   transition: transform 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
  }
  .ceremony-card--photo {
    padding: 0;
@@ -242,8 +445,10 @@
  }
  .ceremony-photo {
    display: block;
-   width: 100%;
-   aspect-ratio: 16 / 9;
+   width: auto;
+   max-width: 320px;
+   max-height: 160px;
+   margin: 0 auto;
    object-fit: cover;
    object-position: center;
    border-bottom: 1px solid var(--gold-light);
@@ -456,6 +661,17 @@
    border-radius: 28px;
    border: 1px solid rgba(250, 215, 170, 0.35);
    box-shadow: 0 16px 40px rgba(23, 17, 10, 0.08);
+   animation: motionEntrance 0.9s ease both;
+   transition: transform 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+ }
+
+ .music-card:hover,
+ .ceremony-card:hover,
+ .instruction-card:hover,
+ .sponsor-card:hover,
+ .countdown-card:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 28px 70px rgba(23, 17, 10, 0.12);
  }
 
  .music-card--split {
@@ -726,6 +942,8 @@
    box-shadow: 0 24px 50px rgba(23, 17, 10, 0.08);
    position: relative;
    overflow: hidden;
+   animation: motionEntrance 0.9s ease both;
+   transition: transform 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
  }
 
  .sponsor-card > * {
@@ -760,6 +978,13 @@
  /* Mea Culpa para "Nos casamos" */
  #story .section-title {
    font-family: 'Mea Culpa', cursive;
+   font-size: clamp(3rem, 8vw, 5rem);
+   line-height: 1.05;
+   margin-bottom: 1.75rem;
+ }
+ #story .story-text {
+   max-width: 620px;
+   margin: 0 auto;
  }
 
  /* â"€â"€ ROSE DECORATIONS â"€â"€ */

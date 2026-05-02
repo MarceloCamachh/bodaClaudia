@@ -7,7 +7,7 @@ export function StoryChapter({ imageSrc, imageAlt }: StoryChapterProps) {
   return (
     <section id="story" className="story-beat" aria-labelledby="story-heading">
       <div className="story-copy">
-        <p className="section-label">Invitación</p>
+        <p className="section-label">Con la bendición de Dios y Nuestros padres</p>
         <h2 id="story-heading" className="section-title">
           ! Nos vamos a <em>casar ¡</em>
         </h2>

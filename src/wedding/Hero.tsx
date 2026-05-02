@@ -93,7 +93,15 @@ export function Hero({ heroImage }: HeroProps) {
           />
           <div className="hero-veil" aria-hidden />
           <div className="hero-content">
-            <p className="hero-eyebrow">Con la bendición de Dios</p>
+            <p
+              className="hero-eyebrow"
+              style={{
+                transform: `scale(${1 + progress * 0.80})`,
+                transformOrigin: 'center',
+              }}
+            >
+              Invitación
+            </p>
             <h1 className="hero-names">
               <em>Claudia Isela</em>
               <span className="hero-ampersand">&amp;</span>
@@ -105,7 +113,7 @@ export function Hero({ heroImage }: HeroProps) {
             </p>
           </div>
           <div className="scroll-hint">
-            <span>Descubre la historia</span>
+            <span>Desliza</span>
             <svg
               width="20"
               height="20"
