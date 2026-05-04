@@ -21,30 +21,6 @@ const RingsIcon = () => (
   </svg>
 );
 
-// Pareja bailando vals: silueta clásica entrelazada
-const WaltzIcon = () => (
-  <svg viewBox="0 0 48 48" fill="currentColor" width="36" height="36">
-    {/* cabeza él */}
-    <circle cx="29" cy="7" r="3.5" />
-    {/* cuerpo él */}
-    <path d="M26 11 Q22 16 23 22 L27 22 Q27 17 29 14 Q31 17 31 22 L35 22 Q36 16 32 11 Z" />
-    {/* piernas él */}
-    <path d="M27 22 Q25 30 24 36 L27 36 Q28 31 29 27 Q30 31 31 36 L34 36 Q33 30 31 22 Z" />
-    {/* cabeza ella */}
-    <circle cx="19" cy="8" r="3" />
-    {/* vestido ella */}
-    <path d="M16 12 Q13 16 14 20 L17 20 Q17 16 19 14 Q21 16 21 20 L24 20 Q25 16 22 12 Z" />
-    {/* falda ella */}
-    <path d="M14 20 Q11 28 10 36 L14 36 Q16 29 19 25 Q22 29 22 36 L26 36 Q25 28 24 20 Z" />
-    {/* brazos unidos */}
-    <path d="M24 16 Q26 14 28 15" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
-    {/* nota musical decorativa */}
-    <circle cx="39" cy="12" r="2" />
-    <rect x="40.5" y="7" width="1.2" height="5" rx="0.5" />
-    <circle cx="43" cy="9" r="1.5" />
-    <rect x="44.2" y="4" width="1.2" height="5" rx="0.5" />
-  </svg>
-);
 
 // Plato con cubiertos: clásico y limpio
 const DinnerIcon = () => (
