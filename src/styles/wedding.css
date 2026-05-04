@@ -933,12 +933,36 @@
    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
    font-weight: 600;
    color: var(--text);
-   margin-bottom: 0.5rem;
+   margin-bottom: 0.35rem;
+ }
+
+ .sponsor-card-label {
+   font-family: 'Cinzel', serif;
+   font-size: 0.85rem;
+   letter-spacing: 0.3em;
+   text-transform: uppercase;
+   color: var(--gold-dark);
+   margin-bottom: 1.2rem;
+   letter-spacing: 0.28em;
+ }
+
+ .sponsor-group {
+   display: grid;
+   gap: 1rem;
+ }
+
+ .sponsor-person {
+   padding-top: 1rem;
+   border-top: 1px solid rgba(250, 215, 170, 0.35);
+ }
+
+ .sponsor-person:first-of-type {
+   border-top: none;
  }
 
  .sponsor-role {
    font-family: 'Cinzel', serif;
-   font-size: 0.65rem;
+   font-size: 0.7rem;
    letter-spacing: 0.2em;
    color: var(--gold-dark);
    text-transform: uppercase;
@@ -1039,32 +1063,32 @@
  }
 
  .rose-top-left-sm {
-   top: -28px;
-   left: -28px;
-   width: 110px;
-   height: 110px;
+   top: -32px;
+   left: -32px;
+   width: 128px;
+   height: 128px;
  }
 
  .rose-top-right-sm {
-   top: -28px;
-   right: -28px;
-   width: 110px;
-   height: 110px;
+   top: -32px;
+   right: -32px;
+   width: 128px;
+   height: 128px;
    transform: scaleX(-1);
  }
 
  .rose-bottom-left-sm {
-   bottom: -28px;
-   left: -28px;
-   width: 110px;
-   height: 110px;
+   bottom: -32px;
+   left: -32px;
+   width: 128px;
+   height: 128px;
  }
 
  .rose-bottom-right-sm {
-   bottom: -28px;
-   right: -28px;
-   width: 110px;
-   height: 110px;
+   bottom: -32px;
+   right: -32px;
+   width: 128px;
+   height: 128px;
    transform: scaleX(-1);
  }
 

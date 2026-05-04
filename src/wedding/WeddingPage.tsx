@@ -102,9 +102,10 @@ export function WeddingPage() {
       <Divider />
 
       <section>
-        <div className="love-quote">
+        
           <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-left-sm" />
           <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-right-sm" />
+        <div className="love-quote">
           <blockquote>
             &ldquo;El amor es paciente, es bondadoso, no guarda rencor, todo lo
             soporta, todo lo cree, todo lo espera, todo lo puede.&rdquo;
@@ -117,37 +118,54 @@ export function WeddingPage() {
 
       <section id="padrinos">
         <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-left-sm" />
+        <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-right-sm" />
         <p className="section-label">Padrinos</p>
         <h2 className="section-title">
           Quienes nos <em>acompañan</em>
         </h2>
         <div className="sponsors-grid">
           <div className="sponsor-card">
-            <p className="sponsor-name">Freddy Raúl Oliveira Flores</p>
-            <p className="sponsor-role">Padre de la novia</p>
+            <p className="sponsor-card-label">Padres de la novia</p>
+            <div className="sponsor-group">
+              <div className="sponsor-person">
+                <p className="sponsor-name">Freddy Raúl Oliveira Flores</p>
+                <p className="sponsor-role">Padre de la novia</p>
+              </div>
+              <div className="sponsor-person">
+                <p className="sponsor-name">María Lourdes Justiniano Suárez</p>
+                <p className="sponsor-role">Madre de la novia</p>
+              </div>
+            </div>
           </div>
           <div className="sponsor-card">
-            <p className="sponsor-name">María Lourdes Justiniano Suárez</p>
-            <p className="sponsor-role">Madre de la novia</p>
+            <p className="sponsor-card-label">Padres del novio</p>
+            <div className="sponsor-group">
+              <div className="sponsor-person">
+                <p className="sponsor-name">Alcides Landívar Somosa</p>
+                <p className="sponsor-role">Padre del novio</p>
+              </div>
+              <div className="sponsor-person">
+                <p className="sponsor-name">Bertha Ardaya Somosa</p>
+                <p className="sponsor-role">Madre del novio</p>
+              </div>
+            </div>
           </div>
           <div className="sponsor-card">
-            <p className="sponsor-name">Alcides Landívar Somosa</p>
-            <p className="sponsor-role">Padre del novio</p>
-          </div>
-          <div className="sponsor-card">
-            <p className="sponsor-name">Bertha Ardaya Somosa</p>
-            <p className="sponsor-role">Madre del novio</p>
-          </div>
-          <div className="sponsor-card">
-            <p className="sponsor-name">Ivana Carolina Justiniano Sandoval</p>
-            <p className="sponsor-role">Madrina de Boda Religiosa</p>
-          </div>
-          <div className="sponsor-card">
-            <p className="sponsor-name">José Ernesto Senseve</p>
-            <p className="sponsor-role">Padrino de Boda Religiosa</p>
+            <p className="sponsor-card-label">Padrinos</p>
+            <div className="sponsor-group">
+              <div className="sponsor-person">
+                <p className="sponsor-name">Ivana Carolina Justiniano Sandoval</p>
+                <p className="sponsor-role">Madrina de Boda Religiosa</p>
+              </div>
+              <div className="sponsor-person">
+                <p className="sponsor-name">José Ernesto Senseve</p>
+                <p className="sponsor-role">Padrino de Boda Religiosa</p>
+              </div>
+            </div>
           </div>
         </div>
         <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-bottom-right-sm" />
+        <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-bottom-left-sm" />
       </section>
 
       <Divider />
@@ -178,8 +196,11 @@ export function WeddingPage() {
       </section>
 
       <Divider />
-
+      
       <section id="instrucciones" className="instructions-section">
+        
+        <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-left-sm" />
+        <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-right-sm" />
         <p className="section-label">Atuendo</p>
         <h2 className="section-title">Instrucciones importantes</h2>
         <div className="instructions-grid">
@@ -202,6 +223,7 @@ export function WeddingPage() {
 
       <section id="ceremonia">
         <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-right-sm" />
+        <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-left-sm" />
         <h2 className="section-title">Ubicaciones del día</h2>
 
         <div className="ceremony-grid">
@@ -213,9 +235,8 @@ export function WeddingPage() {
             />
             <div className="ceremony-card-inner">
               <p className="ceremony-place">Iglesia San Martín de Porres</p>
-              <p className="ceremony-address">Bolivia</p>
               <span className="ceremony-time">
-                Sábado, 18 de Julio de 2026 &nbsp;·&nbsp; 18:00 hrs.
+                18:00 hrs.
               </span>
               <a
                 className="ceremony-map-link"
@@ -235,9 +256,9 @@ export function WeddingPage() {
               alt="Brindis de celebración"
             />
             <div className="ceremony-card-inner">
-              <p className="ceremony-place">Lugar del evento </p>
+              <p className="ceremony-place">Lugar del evento después de la ceremonia</p>
               <span className="ceremony-time">
-                Después de la ceremonia
+               19:30 hrs.
               </span>
               <a
                 className="ceremony-map-link"
