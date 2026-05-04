@@ -4,6 +4,7 @@ import fotoinicio from '../assets/fotoinicio2.jpeg'
 import iglesia from '../assets/iglesia.jpg'
 import rosas from '../assets/rosas.png'
 import brindis from '../assets/BRINDIS.png'
+import traje from '../assets/traje.png'
 import musica from '../assets/musica.mp3'
 import { Divider } from './Divider'
 import { Hero } from './Hero'
@@ -186,16 +187,37 @@ export function WeddingPage() {
         <h2 className="section-title">Instrucciones importantes</h2>
         <div className="instructions-grid">
           <div className="instruction-card">
+            <div style={{ position: 'absolute', top: '1.2rem', right: '1.2rem', width: '68px', height: '68px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--gold-dark, #a37536)', zIndex: 2 }}>
+              <div style={{
+                width: '30px',
+                height: '30px',
+                backgroundColor: 'currentColor',
+                WebkitMaskImage: `url(${traje})`,
+                WebkitMaskSize: 'contain',
+                WebkitMaskRepeat: 'no-repeat',
+                WebkitMaskPosition: 'center',
+                maskImage: `url(${traje})`,
+                maskSize: 'contain',
+                maskRepeat: 'no-repeat',
+                maskPosition: 'center',
+              }} />
+            </div>
             <p className="instruction-title">Vestimenta formal</p>
-            <p className="instruction-text">Por favor, ven con ropa elegante acorde a la celebración.</p>
+            <p className="instruction-text">Nos encantará que nos acompañes con un atuendo elegante acorde a la ocasión.</p>
           </div>
           <div className="instruction-card">
-            <p className="instruction-title">No ir de blanco</p>
-            <p className="instruction-text">Reservamos el blanco para los novios.</p>
+            <div style={{ position: 'absolute', top: '1.2rem', right: '1.2rem', width: '68px', height: '68px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--gold-dark, #a37536)', zIndex: 2 }}>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.5-.7 1.5-1.6 0-.4-.1-.8-.3-1.1-.3-.4-.5-.9-.5-1.4 0-1.1.9-2 2-2h1.4c2.8 0 5.1-2.3 5.1-5.1C21.2 6.3 17.1 2 12 2Z"/></svg>
+            </div>
+            <p className="instruction-title">Evitar el color blanco</p>
+            <p className="instruction-text">Agradecemos reservar el blanco para los novios en este día tan especial.</p>
           </div>
           <div className="instruction-card">
-            <p className="instruction-title">No llevar niños</p>
-            <p className="instruction-text">La ceremonia y recepción son para adultos, gracias por comprender.</p>
+            <div style={{ position: 'absolute', top: '1.2rem', right: '1.2rem', width: '68px', height: '68px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--gold-dark, #a37536)', zIndex: 2 }}>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <p className="instruction-title">Evento para adultos</p>
+            <p className="instruction-text">Con mucho cariño, hemos organizado la ceremonia y recepción como un espacio para adultos. Gracias por tu comprensión.</p>
           </div>
         </div>
       </section>
@@ -266,14 +288,27 @@ export function WeddingPage() {
         <span className="footer-ornament" />
         <p className="footer-small">Con amor</p>
         <span className="footer-ornament" />
-        <a
-          className="whatsapp-button"
-          href="https://wa.me/59175073422?text=Hola,%20confirmo%20mi%20asistencia"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Confirmar Asistencia
-        </a>
+        <p style={{ fontFamily: '"Mea Culpa", cursive', fontSize: 'clamp(3rem, 6vw, 4rem)', color: 'var(--gold-dark, #a37536)', margin: '1.5rem 0 0.5rem', fontWeight: 100, lineHeight: 1 }}>Confirmar asistencia</p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center', marginTop: '1rem' }}>
+          <a
+            className="whatsapp-button"
+            style={{ marginTop: 0, width: '100%', maxWidth: '320px' }}
+            href="https://wa.me/59175073422?text=Hola,%20confirmo%20mi%20asistencia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Confirmar invitados de la novia
+          </a>
+          <a
+            className="whatsapp-button"
+            style={{ marginTop: 0, width: '100%', maxWidth: '320px' }}
+            href="https://wa.me/59176082787?text=Hola,%20confirmo%20mi%20asistencia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Confirmar invitados del novio
+          </a>
+        </div>
         <p className="footer-small"><br/> Realizado por: <br/> Nicol y Marcelo</p>
 
       </footer>
