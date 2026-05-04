@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import vals from "../assets/vals.png";
 
 interface TimelineEvent {
   time: string;
@@ -103,7 +104,19 @@ const StarIcon = () => (
 const events: TimelineEvent[] = [
   { time: "18:00", label: "Matrimonio Religioso", icon: <ChurchIcon /> },
   { time: "19:30", label: "Recepción", icon: <RingsIcon /> },
-  { time: "20:00", label: "Vals de Novios", icon: <WaltzIcon /> },
+  { time: "20:00", label: "Vals de Novios", icon: <div style={{
+    width: '36px',
+    height: '36px',
+    backgroundColor: 'currentColor',
+    WebkitMaskImage: `url(${vals})`,
+    WebkitMaskSize: 'contain',
+    WebkitMaskRepeat: 'no-repeat',
+    WebkitMaskPosition: 'center',
+    maskImage: `url(${vals})`,
+    maskSize: 'contain',
+    maskRepeat: 'no-repeat',
+    maskPosition: 'center',
+  }} /> },
   { time: "21:00", label: "Cena", icon: <DinnerIcon /> },
   { time: "22:00", label: "Brindis e Inicio de Fiesta", icon: <ToastIcon /> },
   { time: "23:30", label: "Torta", icon: <CakeIcon /> },
