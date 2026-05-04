@@ -184,7 +184,6 @@ export function WeddingPage() {
         
         <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-left-sm" />
         <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-right-sm" />
-        <p className="section-label">Atuendo</p>
         <h2 className="section-title">Instrucciones importantes</h2>
         <div className="instructions-grid">
           <div className="instruction-card">
