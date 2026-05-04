@@ -292,7 +292,7 @@ export function WeddingPage() {
         <div className="couple-photo-wrap" style={{ margin: '2rem auto 3rem', maxWidth: '320px' }}>
           <img src={fotofinal} alt="Claudia y Juan Carlos" />
         </div>
-        <p style={{ fontFamily: '"Mea Culpa", cursive', fontSize: 'clamp(3rem, 6vw, 4rem)', color: 'var(--gold-dark, #a37536)', margin: '1.5rem 0 0.5rem', fontWeight: 100, lineHeight: 1 }}>Confirmar asistencia</p>
+        <p style={{ fontFamily: '"Mea Culpa", cursive', fontSize: 'clamp(3rem, 6vw, 4rem)', color: 'var(--gold-dark, #a37536)', margin: '1.5rem 0 0.5rem', fontWeight: 100, lineHeight: 1 }}>Confirmar tu asistencia</p>
         <p style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: '1.3rem', color: 'var(--text-light, #7a6246)', maxWidth: '460px', margin: '0.5rem auto 1.5rem', lineHeight: 1.5 }}>Para nosotros es muy importante tu presencia, por eso no olvides confirmar asistencia.</p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center', marginTop: '1rem' }}>
           <a
