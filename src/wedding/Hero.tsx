@@ -14,6 +14,12 @@ function clamp01(n: number) {
   return Math.min(1, Math.max(0, n))
 }
 
+function getViewportHeight() {
+  if (typeof window === 'undefined') return 0
+  const visualHeight = window.visualViewport?.height ?? 0
+  return Math.max(window.innerHeight, visualHeight)
+}
+
 export function Hero({ heroImage }: HeroProps) {
   const stageRef = useRef<HTMLDivElement>(null)
   const heroRef = useRef<HTMLDivElement>(null)
@@ -21,12 +27,17 @@ export function Hero({ heroImage }: HeroProps) {
 
   const [progress, setProgress] = useState(0)
   const [maxTranslate, setMaxTranslate] = useState(0)
+  const [stageHeight, setStageHeight] = useState(0)
 
   const measureShift = useCallback(() => {
     const hero = heroRef.current
     const img = imgRef.current
     if (!hero || !img) return
-    setMaxTranslate(Math.max(0, img.offsetHeight - hero.offsetHeight))
+    const imgHeight = img.getBoundingClientRect().height
+    const heroHeight = hero.getBoundingClientRect().height
+    const max = Math.max(0, imgHeight - heroHeight)
+    setMaxTranslate(max)
+    setStageHeight(getViewportHeight() + max + 24)
   }, [])
 
   useLayoutEffect(() => {
@@ -37,7 +48,11 @@ export function Hero({ heroImage }: HeroProps) {
       img.addEventListener('load', measureShift, { once: true })
     }
     window.addEventListener('resize', measureShift)
-    return () => window.removeEventListener('resize', measureShift)
+    window.visualViewport?.addEventListener('resize', measureShift)
+    return () => {
+      window.removeEventListener('resize', measureShift)
+      window.visualViewport?.removeEventListener('resize', measureShift)
+    }
   }, [measureShift, heroImage])
 
   useEffect(() => {
@@ -57,7 +72,7 @@ export function Hero({ heroImage }: HeroProps) {
       const rect = el.getBoundingClientRect()
       const elTop = rect.top + window.scrollY
       const H = el.offsetHeight
-      const vh = window.innerHeight
+      const vh = getViewportHeight()
       const range = Math.max(1, H - vh)
       const p = (window.scrollY - elTop) / range
       setProgress(clamp01(p))
@@ -75,7 +90,11 @@ export function Hero({ heroImage }: HeroProps) {
   const translateY = -progress * maxTranslate
 
   return (
-    <div ref={stageRef} className="hero-scroll-stage">
+    <div
+      ref={stageRef}
+      className="hero-scroll-stage"
+      style={stageHeight ? { height: `${stageHeight}px` } : undefined}
+    >
       <div className="hero-scroll-sticky">
         <div ref={heroRef} className="hero hero--scrub">
           <img

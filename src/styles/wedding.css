@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
 
  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
    :root {
@@ -11,17 +11,27 @@
    --text: #3a2e1e;
    --text-light: #7a6a52;
  }
-   html { scroll-behavior: smooth; }
+   html {
+   scroll-behavior: smooth;
+   overflow-x: clip;
+   max-width: 100%;
+ }
    body {
    background: var(--white);
    color: var(--text);
    font-family: 'EB Garamond', Georgia, serif;
-   overflow-x: hidden;
+   overflow-x: clip;
+   max-width: 100%;
+ }
+   #root {
+   overflow-x: clip;
+   max-width: 100%;
  }
    /* â”€â”€ HERO â”€â”€ */
  .hero {
    position: relative;
    min-height: 100vh;
+   min-height: 100svh;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -139,6 +149,19 @@
    background: linear-gradient(to right, transparent, var(--gold), transparent);
    margin: 1.2rem auto;
  }
+
+  /* Hero scroll stage - sticky parallax effect */
+  .hero-scroll-stage {
+    position: relative;
+    /* height set dynamically by the Hero component */
+  }
+  .hero-scroll-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    height: 100svh;
+    overflow: hidden;
+  }
    .scroll-hint {
    position: absolute;
    bottom: 1.8rem;
@@ -830,6 +853,11 @@
    gap: 2.5rem;
    align-items: center;
  }
+ @media (max-width: 760px) {
+   #story.story-beat {
+     padding-top: 2rem;
+   }
+ }
  @media (min-width: 880px) {
    .story-beat {
      grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr);
@@ -1044,10 +1072,10 @@
    /* â"€â"€ Hero: scroll-scrub solo en la primera pantalla â"€â"€ */
  .hero-scroll-stage {
    position: relative;
-   height: 230vh;
    margin: 0;
    padding: 0;
    max-width: none;
+   min-height: 100vh;
  }
  .hero-scroll-sticky {
    position: sticky;
@@ -1083,7 +1111,6 @@
  @media (max-width: 600px) {
    section { padding: 4rem 1.5rem; }
    .story-beat { padding: 4rem 1.5rem; }
-   .hero-scroll-stage { height: 200vh; }
    .ceremony-card:not(.ceremony-card--photo) { padding: 3rem 2rem; }
    .ceremony-card--photo .ceremony-card-inner {
      padding: 2rem 1.5rem 2.5rem;
