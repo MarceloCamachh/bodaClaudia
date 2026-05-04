@@ -293,7 +293,7 @@ export function WeddingPage() {
           <a
             className="whatsapp-button"
             style={{ marginTop: 0, width: '100%', maxWidth: '320px' }}
-            href="https://wa.me/59175073422?text=Hola,%20confirmo%20mi%20asistencia"
+            href="https://wa.me/59175073422?text=Hola Claudia,%20confirmo%20mi%20asistencia"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -302,7 +302,7 @@ export function WeddingPage() {
           <a
             className="whatsapp-button"
             style={{ marginTop: 0, width: '100%', maxWidth: '320px' }}
-            href="https://wa.me/59176082787?text=Hola,%20confirmo%20mi%20asistencia"
+            href="https://wa.me/59176082787?text=Hola Juan Carlos,%20confirmo%20mi%20asistencia"
             target="_blank"
             rel="noopener noreferrer"
           >
