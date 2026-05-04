@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import fotoboda from '../assets/fotoboda.jpeg'
 import fotoinicio from '../assets/fotoinicio2.jpeg'
+import fotofinal from '../assets/fotofinal.jpeg'
 import iglesia from '../assets/iglesia.jpg'
 import rosas from '../assets/rosas.png'
 import brindis from '../assets/BRINDIS.png'
@@ -288,7 +289,11 @@ export function WeddingPage() {
         <span className="footer-ornament" />
         <p className="footer-small">Con amor</p>
         <span className="footer-ornament" />
+        <div className="couple-photo-wrap" style={{ margin: '2rem auto 3rem', maxWidth: '320px' }}>
+          <img src={fotofinal} alt="Claudia y Juan Carlos" />
+        </div>
         <p style={{ fontFamily: '"Mea Culpa", cursive', fontSize: 'clamp(3rem, 6vw, 4rem)', color: 'var(--gold-dark, #a37536)', margin: '1.5rem 0 0.5rem', fontWeight: 100, lineHeight: 1 }}>Confirmar asistencia</p>
+        <p style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: '1.3rem', color: 'var(--text-light, #7a6246)', maxWidth: '460px', margin: '0.5rem auto 1.5rem', lineHeight: 1.5 }}>Para nosotros es muy importante tu presencia, por eso no olvides confirmar asistencia.</p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center', marginTop: '1rem' }}>
           <a
             className="whatsapp-button"
