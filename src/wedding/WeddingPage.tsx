@@ -123,44 +123,26 @@ export function WeddingPage() {
         <h2 className="section-title">
           Quienes nos <em>acompañan</em>
         </h2>
-        <div className="sponsors-grid">
-          <div className="sponsor-card">
-            <p className="sponsor-card-label">Padres de la novia</p>
-            <div className="sponsor-group">
-              <div className="sponsor-person">
-                <p className="sponsor-name">Freddy Raúl Oliveira Flores</p>
-                <p className="sponsor-role">Padre de la novia</p>
-              </div>
-              <div className="sponsor-person">
-                <p className="sponsor-name">María Lourdes Justiniano Suárez</p>
-                <p className="sponsor-role">Madre de la novia</p>
-              </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem', marginTop: '3rem', textAlign: 'center' }}>
+          <div>
+            <p className="sponsor-card-label" style={{ marginBottom: '1rem' }}>Padres de la novia</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <p className="sponsor-name">Freddy Raúl Oliveira Flores</p>
+              <p className="sponsor-name">María Lourdes Justiniano Suárez</p>
             </div>
           </div>
-          <div className="sponsor-card">
-            <p className="sponsor-card-label">Padres del novio</p>
-            <div className="sponsor-group">
-              <div className="sponsor-person">
-                <p className="sponsor-name">Alcides Landívar Somosa</p>
-                <p className="sponsor-role">Padre del novio</p>
-              </div>
-              <div className="sponsor-person">
-                <p className="sponsor-name">Bertha Ardaya Somosa</p>
-                <p className="sponsor-role">Madre del novio</p>
-              </div>
+          <div>
+            <p className="sponsor-card-label" style={{ marginBottom: '1rem' }}>Padres del novio</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <p className="sponsor-name">Alcides Landívar Somosa</p>
+              <p className="sponsor-name">Bertha Ardaya Somosa</p>
             </div>
           </div>
-          <div className="sponsor-card">
-            <p className="sponsor-card-label">Padrinos</p>
-            <div className="sponsor-group">
-              <div className="sponsor-person">
-                <p className="sponsor-name">Ivana Carolina Justiniano Sandoval</p>
-                <p className="sponsor-role">Madrina de Boda Religiosa</p>
-              </div>
-              <div className="sponsor-person">
-                <p className="sponsor-name">José Ernesto Senseve</p>
-                <p className="sponsor-role">Padrino de Boda Religiosa</p>
-              </div>
+          <div>
+            <p className="sponsor-card-label" style={{ marginBottom: '1rem' }}>Padrinos</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <p className="sponsor-name">Ivana Carolina Justiniano Sandoval</p>
+              <p className="sponsor-name">José Ernesto Senseve</p>
             </div>
           </div>
         </div>
