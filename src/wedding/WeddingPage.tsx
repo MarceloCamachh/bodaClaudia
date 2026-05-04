@@ -119,7 +119,6 @@ export function WeddingPage() {
       <section id="padrinos">
         <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-left-sm" />
         <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-right-sm" />
-        <p className="section-label">Padrinos</p>
         <h2 className="section-title">
           Quienes nos <em>acompañan</em>
         </h2>
