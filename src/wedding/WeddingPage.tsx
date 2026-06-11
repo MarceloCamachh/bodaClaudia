@@ -104,9 +104,9 @@ export function WeddingPage() {
       <Divider />
 
       <section>
-        
-          <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-left-sm" />
-          <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-right-sm" />
+
+        <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-left-sm" />
+        <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-right-sm" />
         <div className="love-quote">
           <blockquote>
             &ldquo;El amor es paciente, es bondadoso, no guarda rencor, todo lo
@@ -179,9 +179,9 @@ export function WeddingPage() {
       </section>
 
       <Divider />
-      
+
       <section id="instrucciones" className="instructions-section">
-        
+
         <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-left-sm" />
         <img src={rosas} alt="rosas decorativas" className="rose-decoration rose-top-right-sm" />
         <h2 className="section-title">Instrucciones importantes</h2>
@@ -207,14 +207,14 @@ export function WeddingPage() {
           </div>
           <div className="instruction-card">
             <div style={{ position: 'absolute', top: '1.2rem', right: '1.2rem', width: '68px', height: '68px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--gold-dark, #a37536)', zIndex: 2 }}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.5-.7 1.5-1.6 0-.4-.1-.8-.3-1.1-.3-.4-.5-.9-.5-1.4 0-1.1.9-2 2-2h1.4c2.8 0 5.1-2.3 5.1-5.1C21.2 6.3 17.1 2 12 2Z"/></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="13.5" cy="6.5" r=".5" /><circle cx="17.5" cy="10.5" r=".5" /><circle cx="8.5" cy="7.5" r=".5" /><circle cx="6.5" cy="12.5" r=".5" /><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.5-.7 1.5-1.6 0-.4-.1-.8-.3-1.1-.3-.4-.5-.9-.5-1.4 0-1.1.9-2 2-2h1.4c2.8 0 5.1-2.3 5.1-5.1C21.2 6.3 17.1 2 12 2Z" /></svg>
             </div>
             <p className="instruction-title">Evitar el color blanco</p>
             <p className="instruction-text">Agradecemos reservar el blanco para los novios en este día tan especial.</p>
           </div>
           <div className="instruction-card">
             <div style={{ position: 'absolute', top: '1.2rem', right: '1.2rem', width: '68px', height: '68px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--gold-dark, #a37536)', zIndex: 2 }}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
             </div>
             <p className="instruction-title">Evento para adultos</p>
             <p className="instruction-text">Con mucho cariño, hemos organizado la ceremonia y recepción como un espacio para adultos. Gracias por tu comprensión.</p>
@@ -261,11 +261,11 @@ export function WeddingPage() {
             <div className="ceremony-card-inner">
               <p className="ceremony-place">Lugar del evento después de la ceremonia</p>
               <span className="ceremony-time">
-               19:30 hrs.
+                19:30 hrs.
               </span>
               <a
                 className="ceremony-map-link"
-                href="https://maps.app.goo.gl/3sNLk3stVNkqAaDb6"
+                href="https://maps.app.goo.gl/p1dWhzhS1CYi6UzM7"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -313,7 +313,7 @@ export function WeddingPage() {
             Confirmar invitados del novio
           </a>
         </div>
-        <p className="footer-small"><br/> Realizado por: <br/> Nicol y Marcelo</p>
+        <p className="footer-small"><br /> Realizado por: <br /> Nicol y Marcelo</p>
 
       </footer>
     </main>
