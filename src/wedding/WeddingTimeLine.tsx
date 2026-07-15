@@ -61,6 +61,18 @@ const ToastIcon = () => (
   </svg>
 );
 
+const PartyIcon = () => (
+  <svg viewBox="0 0 48 48" fill="currentColor" width="36" height="36">
+    {/* Nota musical */}
+    <circle cx="14" cy="34" r="5" />
+    <circle cx="34" cy="30" r="5" />
+    <rect x="18" y="10" width="3" height="24" />
+    <rect x="38" y="6" width="3" height="24" />
+    <rect x="18" y="8" width="23" height="4" rx="1" />
+    <rect x="18" y="16" width="23" height="3" rx="1" />
+  </svg>
+);
+
 const CakeIcon = () => (
   <svg viewBox="0 0 48 48" fill="currentColor" width="36" height="36">
     <rect x="10" y="28" width="28" height="12" rx="2" />
@@ -93,8 +105,9 @@ const events: TimelineEvent[] = [
     maskRepeat: 'no-repeat',
     maskPosition: 'center',
   }} /> },
+  { time: "20:30", label: "Brindis", icon: <ToastIcon /> },
   { time: "21:00", label: "Cena", icon: <DinnerIcon /> },
-  { time: "22:00", label: "Brindis e Inicio de Fiesta", icon: <ToastIcon /> },
+  { time: "22:00", label: "Inicio de la Fiesta", icon: <PartyIcon /> },
   { time: "23:30", label: "Torta", icon: <CakeIcon /> },
   { time: "03:00", label: "Final de Celebración", icon: <StarIcon /> },
 ];
